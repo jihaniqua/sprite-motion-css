@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    background: no-repeat linear-gradient(rgb(204, 214, 251), white);
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(39, 39, 216);
+}
+
+footer {
+    background:linear-gradient(rgba(255, 255, 255, 0), white);
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+aside {
+    display: none;
+}
+
+.screen {
+    display: flex;
+    height: 98vh;
+    background: url("../images/gameboyadvance.png") no-repeat center / 900px;
+}
+
+[alt="pokemon mystery dungeon bg"] {
+    position: absolute;
+    margin: auto;
+    top: -32px; right: 20px; bottom: 24px; left: 12px;
+    width: 390px;
+}
+
+#pikachu {
+    margin: auto;
+    width: 40px;
+    height: 57px;
+    background: url("../images/gba-pokemon-mystery-dungeon-red-rescue-team.png");
+    background-size: 1000px;
+    background-position-x: -2px;
+    background-position-y: -2856.5px;
+    z-index: 1;
+}
+
+/* Buttons */
+.buttons {
+    position: absolute;
+    margin: auto;
+    top: -30px; right: 632px; bottom: 77px; left: 0;
+    width: 120px;
+    height: 120px;
+    z-index: 100;
+}
+
+#buttonUp,
+#buttonRight,
+#buttonLeft,
+#buttonDown {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+#buttonUp {
+    left: 40px;
+}
+
+#buttonRight {
+    left: 80px;
+}
+
+#buttonLeft {
+    top: -40px;
+}
+
+#buttonDown {
+    left: 40px; bottom: 40px;
+}
+
+/* Animation */
+.up {
+	animation: up steps(3) 0.5s infinite;
+}
+
+.right {
+	animation: right steps(3) 0.5s infinite;
+}
+
+.left {
+	animation: left steps(3) 0.5s infinite;
+}
+.down {
+	animation: down steps(3) 0.5s infinite;
+}
+
+@keyframes up {
+    0% {
+        background-position-x: -478px;
+        background-position-y: -9247px;
+    }
+	100% {
+        background-position-x: -592px;
+        background-position-y: -9247px;
+	}
+}
+
+@keyframes right {
+    0% {
+        background-position-x: -230px;
+        background-position-y: -9300px;
+    }
+	100% {
+        background-position-x: -345px;
+        background-position-y: -9300px;
+	}
+}
+
+@keyframes left {
+    0% {
+        background-position-x: -231px;
+        background-position-y: -9247px;
+    }
+	100% {
+        background-position-x: -346px;
+        background-position-y: -9247px;
+	}
+}
+
+@keyframes down {
+    0% {
+        background-position-x: -2px;
+        background-position-y: -9247px;
+    }
+	100% {
+        background-position-x: -111px;
+        background-position-y: -9247px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    .buttons,
+    .screen,
+    footer {
+        display: none;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+}
